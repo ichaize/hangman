@@ -14,3 +14,15 @@ A check is run to confirm the user input a single, alphabetical letter.
 
 
 Two functions are created to make the code easier to read. The first function, check_guess(), ensures the guess is lower case and then checks if it is in the word. The second function, ask_for_input(), asks the user for input and iteratively checks if the guess is a valid, single alphabetical character. Once the user has entered a valid guess, the check_guess() function is then called to check if the guess is in the word. The whole game runs by calling the ask_for_input() function. 
+
+# Milestone 4
+
+The functionality for the game is encapsulated into a Hangman class. 
+
+The class initializes with two parameters, the word list to be used and the number of lives left, which starts at 5. The other attributes are the word guessed so far, the number of unique letters still to guess, the word (randomly chosen from the word list), and the list of letters guessed so far. 
+
+The class has two methods: ask_for_input, and check_guess.
+
+The ask_for_input mthod asks the user to enter a letter, checks the input is a valid alphabetic character that has not been used before, and if so calls the check_guess method and appends the guess to the list of guesses. The function contains a while loop that stops once the number of letters left to guess is zero. 
+
+The check_guess function chcks if the guess passed from ask_for_input is in the word. If so, it updates the progress of the word guessed so far, and reduces the number of letters left to guess. If not, it reduces the number of lives left and prints a sorry message and the remaining number of lives. 

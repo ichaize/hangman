@@ -22,8 +22,9 @@ class Hangman():
                 print("You already tried that letter!")
             else:
                 self.check_guess(guess)
-            self.list_of_guesses.append(guess)
-            break
+                break
+        self.list_of_guesses.append(guess)
+        
 
 
 fruit_list = ["kiwi", "passion fruit", "peach", "pineapple", "mango"]

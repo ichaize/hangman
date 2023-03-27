@@ -12,6 +12,11 @@ class Hangman():
     def check_guess(self, guess):
         if guess.lower() in self.word:
             print(f"Good guess! {guess} is in the word.")
+            for letter in self.word:
+                if letter == guess:
+                    letter_index = self.word.index(letter)
+                    self.word_guessed[letter_index] = guess
+            self.num_letters -= 1
     
     def ask_for_input(self):
         while True:
@@ -30,6 +35,7 @@ class Hangman():
 fruit_list = ["kiwi", "passion fruit", "peach", "pineapple", "mango"]
 fruit_game = Hangman(fruit_list)
 fruit_game.ask_for_input()
+print(fruit_game.num_letters)
 
 
 

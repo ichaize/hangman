@@ -20,10 +20,9 @@ class Hangman():
                 print("Invalid letter. Please, enter a single alphabetical character.")
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
-                break
             else:
                 self.check_guess(guess)
-                self.list_of_guesses.append(guess)
+            self.list_of_guesses.append(guess)
 
 
 fruit_list = ["kiwi", "passion fruit", "peach", "pineapple", "mango"]

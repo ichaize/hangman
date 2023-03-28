@@ -31,6 +31,7 @@ class Hangman():
             else:
                 self.check_guess(guess)
             self.list_of_guesses.append(guess)
+            break
 
 fruit_list = ["kiwi", "passionfruit", "peach", "pineapple", "mango"]
 
@@ -44,6 +45,7 @@ def play_game(word_list):
             game.ask_for_input()
         elif num_lives != 0 and game.num_letters == 0:
             print("Congratulations. You won the game!")
+            break
 
 play_game(fruit_list)
 
